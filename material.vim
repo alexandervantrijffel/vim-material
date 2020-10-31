@@ -1,4 +1,5 @@
 " vim-material Theme v1.0.0
+" stored in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim
 
 if version > 580
   hi clear
@@ -12,6 +13,18 @@ let s:is_dark=(&background == 'dark')
 let s:gui = {}
 let s:cterm = {}
 
+
+" solarized:
+" let s:gui.background = { 'dark': '#002b36', 'light': '#E4E4E4' }
+" let s:gui.background = { 'dark': '#263238', 'light': '#E4E4E4' }
+" dracula:
+let s:gui.background = { 'dark': '#282a36', 'light': '#E4E4E4' }
+let s:gui.foreground = { 'dark': '#EEFFFF', 'light': '#000000' }
+let s:gui.none       = { 'dark': 'NONE', 'light': 'NONE' }
+let s:gui.selection  = { 'dark': '#455A64', 'light': '#BCBCBC' }
+let s:gui.line       = { 'dark': '#212121', 'light': '#D0D0D0' }
+let s:gui.comment    = { 'dark': '#5D818E', 'light': '#5F5F5F' }
+
 let s:gui.red          = { 'dark': '#FF5370', 'light': '#E53935' }
 let s:gui.dark_red     = { 'dark': '#B71C1C', 'light': '#E53935' }
 let s:gui.pink         = { 'dark': '#F07178', 'light': '#FF5370' }
@@ -24,26 +37,9 @@ let s:gui.light_teal   = { 'dark': '#69f0ae', 'light': '#91B859' }
 let s:gui.pale_blue    = { 'dark': '#B2CCD6', 'light': '#8796B0' }
 let s:gui.cyan         = { 'dark': '#89DDFF', 'light': '#39ADB5' }
 let s:gui.blue         = { 'dark': '#82AAFF', 'light': '#6182B8' }
-let s:gui.blueavt      = { 'dark': '#64b5f6', 'light': '#91B859' }
 let s:gui.purple       = { 'dark': '#C792EA', 'light': '#7C4DFF' }
 let s:gui.violet       = { 'dark': '#BB80B3', 'light': '#945EB8' }
 let s:gui.brown        = { 'dark': '#AB7967', 'light': '#AB7967' }
-
-let s:gui.accent        = { 'dark': '#009688', 'light': '#AB7967' }
-let s:gui.accent_light  = { 'dark': '#63FDD8', 'light': '#AB7967' }
-let s:gui.accent_light2 = { 'dark': '#68FFE3', 'light': '#AB7967' }
-
-" solarized:
-" let s:gui.background = { 'dark': '#002b36', 'light': '#E4E4E4' }
-" let s:gui.background = { 'dark': '#263238', 'light': '#E4E4E4' }
-" dracula:
-let s:gui.background = { 'dark': '#282a36', 'light': '#E4E4E4' }
-let s:gui.foreground = { 'dark': '#EEFFFF', 'light': '#000000' }
-let s:gui.none       = { 'dark': 'NONE', 'light': 'NONE' }
-let s:gui.selection  = { 'dark': s:gui.cyan.light, 'light': s:gui.cyan.light }
-let s:gui.line       = { 'dark': '#212121', 'light': '#D0D0D0' }
-let s:gui.comment    = { 'dark': '#5D818E', 'light': '#5F5F5F' }
-
 
 function! s:hi(group, guifg, guibg, ctermfg, ctermbg, attr)
   if s:gui(a:guifg) != ""
@@ -118,38 +114,32 @@ call s:hi("DiffDelete", s:gui.red, s:gui.background, "", "", "")
 call s:hi("DiffText",   "",        s:gui.selection,  "", "", "")
 
 
-" kleuren over:
-" purple
-" pink
-" accent
-" accent_light2
-" pale_blue
-" blueavt
-
 call s:hi("NonText",     s:gui.comment,    "",               "", "", "")
 call s:hi("helpExample", s:gui.blue,       "",               "", "", "")
 call s:hi("MatchParen",  "",               s:gui.selection,  "", "", "")
-call s:hi("Title",       s:gui.pale_blue,       "",               "", "", "")
+call s:hi("Title",       s:gui.cyan,       "",               "", "", "")
 call s:hi("Comment",     s:gui.comment,    "",               "", "", "italic")
 call s:hi("String",      s:gui.green,      "",               "", "", "")
 call s:hi("Normal",      s:gui.foreground, s:gui.background, "", "", "")
-call s:hi("Visual",      s:gui.teal,       s:gui.selection,  "", "", "")
-call s:hi("Constant",    s:gui.light_yellow,       "",               "", "", "")
+call s:hi("Visual",      "",               s:gui.selection,  "", "", "")
+call s:hi("Constant",    s:gui.pink,       "",               "", "", "")
 call s:hi("Type",        s:gui.yellow,     "",               "", "", "none")
-call s:hi("Define",      s:gui.pink,       "",               "", "", "")
+call s:hi("Define",      s:gui.cyan,       "",               "", "", "")
 call s:hi("Statement",   s:gui.cyan,       "",               "", "", "none")
-call s:hi("Function",    s:gui.blueavt,    "",               "", "", "")
+call s:hi("Function",    s:gui.blue,       "",               "", "", "")
 call s:hi("Conditional", s:gui.cyan,       "",               "", "", "")
-call s:hi("Float",       s:gui.light_yellow,"",            "", "", "")
-call s:hi("Noise",       s:gui.pink,       "",               "", "", "")
-call s:hi("Number",      s:gui.light_yellow,"",            "", "", "")
-call s:hi("Identifier",  s:gui.cyan,       "",             "", "", "")
+call s:hi("Float",       s:gui.orange,     "",               "", "", "")
+call s:hi("Noise",       s:gui.cyan,       "",               "", "", "")
+call s:hi("Number",      s:gui.orange,     "",               "", "", "")
+call s:hi("Identifier",  s:gui.pink,       "",               "", "", "")
 call s:hi("Operator",    s:gui.cyan,       "",               "", "", "")
 call s:hi("PreProc",     s:gui.blue,       "",               "", "", "")
 call s:hi("Search",      s:gui.none,       s:gui.none,       "", "", "underline")
 call s:hi("InSearch",    s:gui.background, s:gui.foreground, "", "", "")
 call s:hi("Todo",        s:gui.red,        s:gui.foreground, "", "", "reverse")
 call s:hi("Special",     s:gui.orange,     "",               "", "", "")
+
+
 
 " Ruby colors
 call s:hi("rubySymbolDelimiter", s:gui.cyan,   "", "", "", "")
@@ -173,8 +163,8 @@ call s:hi("javascriptClassName",        s:gui.yellow,     "", "", "", "bold")
 call s:hi("javascriptClassSuperName",   s:gui.yellow,     "", "", "", "")
 call s:hi("javascriptExport",           s:gui.cyan,       "", "", "", "")
 call s:hi("javascriptFuncKeyword",      s:gui.purple,     "", "", "", "")
-call s:hi("javascriptIdentifierName",   s:gui.cyan, "", "", "", "")
-call s:hi("javascriptLabel",            s:gui.blueavt, "", "", "", "")
+call s:hi("javascriptIdentifierName",   s:gui.foreground, "", "", "", "")
+call s:hi("javascriptLabel",            s:gui.foreground, "", "", "", "")
 call s:hi("javascriptMethod",           s:gui.blue,       "", "", "", "")
 call s:hi("javascriptObjectMethodName", s:gui.blue,       "", "", "", "")
 call s:hi("javascriptObjectLabel",      s:gui.foreground, "", "", "", "")
