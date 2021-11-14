@@ -8,7 +8,7 @@ if version > 580
   endif
 endif
 
-let g:colors_name = "material"
+let g:colors_name = "materialalexandervantrijffel"
 let s:is_dark=(&background == 'dark')
 let s:gui = {}
 let s:cterm = {}
