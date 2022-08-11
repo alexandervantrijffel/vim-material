@@ -41,7 +41,7 @@ let s:gui.background = { 'dark': '#282a36', 'light': '#E4E4E4' }
 let s:gui.foreground = { 'dark': '#EEFFFF', 'light': '#000000' }
 let s:gui.none       = { 'dark': 'NONE', 'light': 'NONE' }
 let s:gui.selection  = { 'dark': s:gui.cyan.light, 'light': s:gui.cyan.light }
-let s:gui.line       = { 'dark': '#212121', 'light': '#D0D0D0' }
+let s:gui.line       = { 'dark': '#005070', 'light': '#005070' }
 let s:gui.comment    = { 'dark': '#5D818E', 'light': '#5F5F5F' }
 
 
