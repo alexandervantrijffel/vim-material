@@ -36,11 +36,11 @@ let s:gui.accent        = { 'dark': '#009688', 'light': '#AB7967' }
 let s:gui.accent_light  = { 'dark': '#63FDD8', 'light': '#AB7967' }
 let s:gui.accent_light2 = { 'dark': '#68FFE3', 'light': '#AB7967' }
 
-" solarized:
-" let s:gui.background = { 'dark': '#002b36', 'light': '#E4E4E4' }
-" let s:gui.background = { 'dark': '#263238', 'light': '#E4E4E4' }
-" dracula:
-let s:gui.background = { 'dark': '#282a36', 'light': '#E4E4E4' }
+
+
+let s:gui.background = { 'dark': '#1F2734', 'light': '#E4E4E4' }
+" darker:
+" let s:gui.background = { 'dark': '#282a36', 'light': '#E4E4E4' }
 let s:gui.foreground = { 'dark': '#EEFFFF', 'light': '#000000' }
 let s:gui.none       = { 'dark': 'NONE', 'light': 'NONE' }
 let s:gui.selection  = { 'dark': s:gui.cyan.light, 'light': s:gui.cyan.light }
