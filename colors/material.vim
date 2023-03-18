@@ -27,6 +27,8 @@ let s:gui.cyan         = { 'dark': '#89DDFF', 'light': '#39ADB5' }
 let s:gui.blue         = { 'dark': '#82AAFF', 'light': '#6182B8' }
 let s:gui.blueavt      = { 'dark': '#64b5f6', 'light': '#91B859' }
 let s:gui.purple       = { 'dark': '#C792EA', 'light': '#7C4DFF' }
+let s:gui.purple2      = { 'dark': '#B892BE', 'light': '#7C4DFF' }
+let s:gui.purple3      = { 'dark': '#B495D4', 'light': '#7C4DFF' }
 let s:gui.violet       = { 'dark': '#BB80B3', 'light': '#945EB8' }
 let s:gui.brown        = { 'dark': '#AB7967', 'light': '#AB7967' }
 
@@ -138,7 +140,7 @@ call s:hi("Visual",      s:gui.teal,       s:gui.selection,  "", "", "")
 call s:hi("Constant",    s:gui.light_yellow,       "",               "", "", "")
 call s:hi("Type",        s:gui.yellow,     "",               "", "", "none")
 call s:hi("Define",      s:gui.pink,       "",               "", "", "")
-call s:hi("Statement",   s:gui.cyan,       "",               "", "", "none")
+call s:hi("Statement",   s:gui.purple3,       "",               "", "", "none")
 call s:hi("Function",    s:gui.blueavt,    "",               "", "", "")
 call s:hi("Conditional", s:gui.cyan,       "",               "", "", "")
 call s:hi("Float",       s:gui.light_yellow,"",            "", "", "")
