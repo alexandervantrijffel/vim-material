@@ -12,6 +12,7 @@ let s:is_dark=(&background == 'dark')
 let s:gui = {}
 let s:cterm = {}
 
+let s:gui.white          = { 'dark': '#FFFFFF', 'light': '#FFFFFF' }
 let s:gui.red          = { 'dark': '#FF5370', 'light': '#E53935' }
 let s:gui.dark_red     = { 'dark': '#B71C1C', 'light': '#E53935' }
 let s:gui.pink         = { 'dark': '#F07178', 'light': '#FF5370' }
@@ -143,7 +144,7 @@ call s:hi("Conditional", s:gui.cyan,       "",               "", "", "")
 call s:hi("Float",       s:gui.light_yellow,"",            "", "", "")
 call s:hi("Noise",       s:gui.pink,       "",               "", "", "")
 call s:hi("Number",      s:gui.light_yellow,"",            "", "", "")
-call s:hi("Identifier",  s:gui.cyan,       "",             "", "", "")
+call s:hi("Identifier",  s:gui.white,       "",             "", "", "")
 call s:hi("Operator",    s:gui.cyan,       "",               "", "", "")
 call s:hi("PreProc",     s:gui.blue,       "",               "", "", "")
 call s:hi("Search",      s:gui.none,       s:gui.none,       "", "", "underline")
