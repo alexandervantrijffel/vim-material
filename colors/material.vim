@@ -1,5 +1,3 @@
-" vim-material Theme v1.0.0
-
 if version > 580
   hi clear
   if exists("syntax_on")
@@ -21,6 +19,7 @@ let s:gui.light_yellow = { 'dark': '#FFE57F', 'light': '#FFB62C' }
 let s:gui.yellow       = { 'dark': '#FFCB6B', 'light': '#FFB62C' }
 let s:gui.green        = { 'dark': '#C3E88D', 'light': '#91B859' }
 let s:gui.teal         = { 'dark': '#004D40', 'light': '#91B859' }
+let s:gui.dark_blue    = { 'dark': '#1B222E', 'light': '#1B222E' }
 let s:gui.light_teal   = { 'dark': '#69f0ae', 'light': '#91B859' }
 let s:gui.pale_blue    = { 'dark': '#B2CCD6', 'light': '#8796B0' }
 let s:gui.cyan         = { 'dark': '#89DDFF', 'light': '#39ADB5' }
@@ -35,8 +34,6 @@ let s:gui.brown        = { 'dark': '#AB7967', 'light': '#AB7967' }
 let s:gui.accent        = { 'dark': '#009688', 'light': '#AB7967' }
 let s:gui.accent_light  = { 'dark': '#63FDD8', 'light': '#AB7967' }
 let s:gui.accent_light2 = { 'dark': '#68FFE3', 'light': '#AB7967' }
-
-
 
 let s:gui.background = { 'dark': '#1F2734', 'light': '#E4E4E4' }
 " darker:
@@ -104,8 +101,9 @@ call s:hi("CursorLineNr", s:gui.cyan,       s:gui.line,       "", "", "")
 call s:hi("Directory",    s:gui.blue,       "",               "", "", "")
 call s:hi("FoldColumn",   "",               s:gui.background, "", "", "")
 call s:hi("Folded",       s:gui.comment,    s:gui.line,       "", "", "")
-call s:hi("PMenu",        s:gui.foreground, s:gui.line,       "", "", "")
-call s:hi("PMenuSel",     s:gui.cyan,       s:gui.selection,  "", "", "bold")
+call s:hi("PMenu",        s:gui.blue,       s:gui.background,       "", "", "")
+call s:hi("PMenuThumb",   s:gui.blue,       s:gui.background,       "", "", "")
+call s:hi("PMenuSel",     s:gui.blue,       s:gui.dark_blue,  "", "", "")
 call s:hi("ErrorMsg",     s:gui.red,        s:gui.none,       "", "", "")
 call s:hi("Error",        s:gui.red,        s:gui.none,       "", "", "")
 call s:hi("WarningMsg",   s:gui.orange,     "",               "", "", "")
@@ -143,7 +141,7 @@ call s:hi("Define",      s:gui.pink,       "",               "", "", "")
 call s:hi("Statement",   s:gui.purple3,       "",               "", "", "none")
 call s:hi("Function",    s:gui.blueavt,    "",               "", "", "")
 call s:hi("Conditional", s:gui.cyan,       "",               "", "", "")
-call s:hi("Float",       s:gui.light_yellow,"",            "", "", "")
+call s:hi("Float",       s:gui.light_yellow,"",       "", "", "")
 call s:hi("Noise",       s:gui.pink,       "",               "", "", "")
 call s:hi("Number",      s:gui.light_yellow,"",            "", "", "")
 call s:hi("Identifier",  s:gui.white,       "",             "", "", "")
