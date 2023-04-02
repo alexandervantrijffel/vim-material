@@ -92,7 +92,7 @@ if has("nvim")
 endif
 
 " Editor colors
-call s:hi("ColorColumn",  s:gui.none,       s:gui.line,       "", "", "")
+call s:hi("ColorColumn",  s:gui.none,       s:gui.none,       "", "", "")
 call s:hi("Cursor",       s:gui.yellow,     "",               "", "", "")
 call s:hi("CursorColumn", s:gui.none,       s:gui.line,       "", "", "")
 call s:hi("LineNr",       s:gui.comment,    "",               "", "", "")
@@ -107,7 +107,7 @@ call s:hi("PMenuSel",     s:gui.blue,       s:gui.dark_blue,  "", "", "")
 call s:hi("ErrorMsg",     s:gui.red,        s:gui.none,       "", "", "")
 call s:hi("Error",        s:gui.red,        s:gui.none,       "", "", "")
 call s:hi("WarningMsg",   s:gui.orange,     "",               "", "", "")
-call s:hi("VertSplit",    s:gui.background, s:gui.foreground, "", "", "")
+call s:hi("VertSplit",    s:gui.background, s:gui.dark_blue, "", "", "")
 call s:hi("Conceal",      s:gui.comment,    s:gui.background, "", "", "")
 call s:hi("SignColumn",   s:gui.comment,    s:gui.none,       "", "", "")
 
